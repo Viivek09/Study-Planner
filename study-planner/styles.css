@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.card {
+  background: #020617;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+  border: 1px solid #1f2937;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.btn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 999px;
+  border: none;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tasks-header select {
+  max-width: 150px;
+}
+
+.task-list {
+  list-style: none;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2933;
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.task-main {
+  max-width: 70%;
+}
+
+.task-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.task-meta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  margin-top: 4px;
+}
+
+.badge-subject {
+  background: #1d4ed8;
+}
+
+.badge-done {
+  background: #16a34a;
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.action-btn {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+.mark-done {
+  background: #22c55e;
+  color: #022c22;
+}
+
+.delete {
+  background: #ef4444;
+  color: #450a0a;
+}
+
+.empty-msg {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}

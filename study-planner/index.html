@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Study Planner Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Study Planner</h1>
+      <p>Plan your CSE subjects and daily tasks</p>
+    </header>
+
+    <main class="main">
+      <section class="card add-task-card">
+        <h2>Add New Task</h2>
+        <form id="task-form">
+          <label>
+            Task Title
+            <input type="text" id="title" placeholder="e.g. DSA Assignment 1" required />
+          </label>
+
+          <label>
+            Subject
+            <select id="subject">
+              <option value="DSA">DSA</option>
+              <option value="OS">Operating Systems</option>
+              <option value="DBMS">DBMS</option>
+              <option value="CN">Computer Networks</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+          <label>
+            Deadline
+            <input type="date" id="deadline" />
+          </label>
+
+          <button type="submit" class="btn">Add Task</button>
+        </form>
+      </section>
+
+      <section class="card tasks-card">
+        <div class="tasks-header">
+          <h2>Your Tasks</h2>
+          <select id="filter-subject">
+            <option value="All">All Subjects</option>
+            <option value="DSA">DSA</option>
+            <option value="OS">Operating Systems</option>
+            <option value="DBMS">DBMS</option>
+            <option value="CN">Computer Networks</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <ul id="task-list" class="task-list">
+          <!-- Tasks will be added here by JavaScript -->
+        </ul>
+        <p id="empty-msg" class="empty-msg">No tasks yet. Add your first one!</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
